@@ -1,6 +1,39 @@
 ﻿<html>
 <body>
 	<style>
+		@font-face {
+			font-family: Inverkrug; /* Имя шрифта */
+			src: url(Inverkrug.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: OutlineInverkrug; /* Имя шрифта */
+			src: url(OutlineInverkrug.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: mrVlaShuVlaShu; /* Имя шрифта */
+			src: url(mrVlaShuVlaShu.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: mrKindlyJasmineG; /* Имя шрифта */
+			src: url(mrKindlyJasmineG.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: TruetypewriterPolyglOTT; /* Имя шрифта */
+			src: url(TruetypewriterPolyglOTT.ttf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: PonterX; /* Имя шрифта */
+			src: url(PonterX.ttf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: SlimamifMedium; /* Имя шрифта */
+			src: url(SlimamifMedium.ttf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: MakBold; /* Имя шрифта */
+			src: url(MakBold.otf); /* Путь к файлу со шрифтом */
+		}
+		
 		body {
 			margin: 0px;
 			
@@ -14,6 +47,7 @@
 			opacity: 0.8;
 			font-family: Comic Sans MS,'Roboto',sans-serif;
 			font-size: 10pt;
+			z-index: 2;
 		}
 		
 		.time {
@@ -30,6 +64,10 @@
 		.hspace {
 			min-height: 30px;
 		}
+		#logo {
+			font-family: mrVlaShuVlaShu;
+			font-size: 27px;
+		}
 		.messenger img {
 			margin-top: 20px;
 			width: 34px;
@@ -44,7 +82,7 @@
 		}
 		
 		.content {
-			height: 80%;
+			min-height: 80%;
 			padding-top: 5%;
 			padding-left: 10%;
 			background: url(bg.jpg) 100% no-repeat;
@@ -57,7 +95,7 @@
 			color: #FFFFCC;
 			list-style-type: circle;
 			font-weight: bolder;
-			font-family: Comic Sans MS,'Roboto',sans-serif;
+			font-family: MakBold;
 			
 		}
 		
@@ -65,18 +103,14 @@
 		
 		 .content-text-1 {
 			color: #FFFFCC;
+			font-family: MakBold;
 			font-size: 22pt;
 			
 		 }
-		  .content-text-2 {
-			color: #FFFFCC;
-			font-family: Comic Sans MS,'Roboto',sans-serif;
-			
-		 }
-		
+		 	
 		 .content-text-3 {
 			color: #FF9933;
-			font-family: Comic Sans MS,'Roboto',sans-serif;
+			font-family: TruetypewriterPolyglOTT;
 			
 		 }
 		
@@ -86,10 +120,10 @@
 			border-radius: 5px;
 			opacity: 0.75;
 			max-width: 750px;
-			max-height: 100px;
+			max-height: 120px;
 			padding-left: 30px;
-			font: 100% Times New Roman;
-			color: #fff;
+			font: 120% mrKindlyJasmineG;
+			color: #660000;
 			text-align: center;
 			margin-left: auto;
 			margin-right: auto;
@@ -114,9 +148,46 @@
 			border-radius: 5px;
 			border: 0px;
 		}
-		.request button {
-			margin-bottom: 20px;
+		
+
+	
+		.request h2 {
+			color: #FF9931;
+    		font-family: TruetypewriterPolyglOTT;
 		}
+
+		.request p {
+			color: #FF9931;
+    		font-family: Comic Sans MS,'Roboto',sans-serif;
+			font-size: 25px;
+		}
+		#hider1 {
+			margin-bottom: 20px;
+			width: 160px;
+			color: white;
+			font-size: 12pt;
+			background-color: #199c68;
+
+		}
+		#hider2 {
+			margin-bottom: 20px;
+			width: 160px;
+			color: white;
+			font-size: 12pt;
+			background-color: #F76835;
+
+		}
+		#direction1 {
+			display: none;
+		}
+		#direction2 {
+			display: none;
+		}
+		#direction1 h2, #direction2 h2 {
+			font-family: PonterX;
+			color: #660033;
+		}
+
 		
 		.footer {
 			background: url(bg-footer.jpg) 100% no-repeat;
@@ -128,11 +199,21 @@
 			font-size: 26pt;
 			text-align: center;
 		}
+		.content-text-footer {
+			color: #FFFFCC;
+			font-family: TruetypewriterPolyglOTT;
+			
+		 }
 		</style>
 <div class="header">
 	<div><img src="logo.png"></div>
 	<div align="center" class="vspace">|<br>|<br>|</div>
-	<div>Автобусные билеты из Луганска <br> ЛНР в Москву, Санкт-Питербург,<br> Росто-на-Дону, Воронеж <br>или обратно</div>
+	<div>
+		<div id="logo">
+			НОВО-ТРАНС
+		</div><br> 
+		Автобусные билеты из Луганска <br> ЛДНР в Россию, или обратно.
+	</div>
 	<div class="vspace"> &nbsp;</div>
 	<div class="time">Ежедневно с 9 : 00 до 20 : 00</div>
 	<div class="vspace"> &nbsp;</div>
@@ -142,7 +223,8 @@
 		<div ><a href="#"><img src="telegram-icon-1.png"></a>&nbsp;&nbsp;</div><div><a href="#"><img src="whatsapp-icon-1.png"></a>&nbsp;&nbsp;</div><div><a href="#"><img src="viber-icon-1.png"></a></div>
 	</div>
 	<div class="stroke"> &nbsp;</div>
-	<div class="phones">+38 (095) 555-33-55<br>+38 (072) 555-77-88<br>+7 (906) 455-88-99</div>
+	<div class="phones">+38 (072) 208-98-07<br>
+		+7 (965) 369-04-91<br></div>
 </div>
 <div class="content">
 	<div class="hspace">&nbsp;</div>
@@ -165,7 +247,7 @@
 	</div>
 	
 	<div class="request">
-		<h1 class="content-text-3">Оставить заявку для бронирования билета</h1>
+		<h1 class="content-text-3">Оставить заявку для<br> бронирования билета</h1>
 		<form action="https://formspree.io/#" method="POST">
 			<label>
 				<input type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="Фамилия"><br>
@@ -181,19 +263,84 @@
 				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="Телефон">
 			</label><br>
 			<br>
+			<h1 class="content-text-3">Выбирете направление</h1>
+			<input type="button" id="hider1" size="20" value="Из ЛДНР в Россию">
+			<input type="button" id="hider2"  value="Из России в ЛДНР">
+
 			<label>
+				
+				
+			<div id="direction1">
+				<h2>Из ЛДНР в Россию</h2>
 				<select size="1" name="Направление">
-					<option value="Москва-Луганск">Москва-Луганск</option>
-					<option value="Сантк-Питербург-Луганск">Сантк-Питербург-Луганск</option>
-					<option value="Нижний Новгород-Луганск">Нижний Новгород-Луганск</option>
-					<option value="Воронеж-Луганск">Воронеж-Луганск</option>
-					<option value="Ростов-на-Дону-Луганск">Ростов-на-Дону-Луганск</option>
-					<option value="Луганск-Москва">Луганск-Москва</option>
-					<option value="Луганск-Санк-Питебург">Луганск-Санк-Питебург</option>
-					<option value="Луганск-Нижний Новгород">Луганск-Нижний Новгород</option>
-					<option value="Луганск-Воронеж">Луганск-Воронеж</option>
-					<option value="Луганск-Ростов-на-Дону">Луганск-Ростов-на-Дону</option>
-				   </select>
+					<option value="Луганск">Луганск</option>
+					<option value="Алчевск">Алчевск</option>
+					<option value="Стаханов">Стаханов</option>
+					<option value="Красный Луч">Красный Луч</option>
+					<option value="Ровеньки">Ровеньки</option>
+					<option value="Краснодон">Краснодон/option>
+					<option value="Лутугино">Лутугино</option>
+					<option value="Донец">Донец</option>
+					<option value="Горловка">Горловка</option>
+					<option value="Дебальцево">Дебальцево</option>
+					<option value="Енакиево">Енакиево</option>
+					<option value="Макеевка">Макеевка</option>
+					<option value="Углегорск">Углегорск/option>
+					<option value="Торез">Торез</option>
+					<option value="Шахтёрск">Шахтёрск</option>
+				</select>
+				
+				<select size="1" name="Направление">
+					<option value="Москва">Москва</option>
+					<option value="Санкт-Питербург">Санкт-Питербург</option>
+					<option value="Новгород Великий">Нижний Новгород</option>
+					<option value="Ростов-на-Дону">Ростов-на-Дону</option>
+					<option value="Воронеж">Воронеж</option>
+					<option value="Белгород">Белгород</option>
+				</select>
+			</div>
+			<div id="direction2">
+				<h2>Из России в ЛДНР</h2>
+				<select size="1" name="Направление">
+					<option value="Москва">Москва</option>
+					<option value="Санкт-Питербург">Санкт-Питербург</option>
+					<option value="Новгород Великий">Нижний Новгород</option>
+					<option value="Ростов-на-Дону">Ростов-на-Дону</option>
+					<option value="Воронеж">Воронеж</option>
+					<option value="Белгород">Белгород</option>
+				</select>
+				<select size="1" name="Направление">
+				<option value="Луганск">Луганск</option>
+				<option value="Алчевск">Алчевск</option>
+				<option value="Стаханов">Стаханов</option>
+				<option value="Красный Луч">Красный Луч</option>
+				<option value="Ровеньки">Ровеньки</option>
+				<option value="Краснодон">Краснодон/option>
+				<option value="Лутугино">Лутугино</option>
+				<option value="Донец">Донец</option>
+				<option value="Горловка">Горловка</option>
+				<option value="Дебальцево">Дебальцево</option>
+				<option value="Енакиево">Енакиево</option>
+				<option value="Макеевка">Макеевка</option>
+				<option value="Углегорск">Углегорск/option>
+				<option value="Торез">Торез</option>
+				<option value="Шахтёрск">Шахтёрск</option>
+			</select>
+			
+		</div>
+
+				<script>
+					document.getElementById('hider1').onclick = function() {
+						document.getElementById('direction1').style.display = "block";
+						document.getElementById('direction2').style.display = "none";
+					}
+					document.getElementById('hider2').onclick = function() {
+						document.getElementById('direction2').style.display = "block";
+						document.getElementById('direction1').style.display = "none";
+
+					}
+				</script>
+				
 			</label><br>  
 			<label>
 				<select size="1" name="Количество детей">
@@ -209,11 +356,11 @@
 		  </form>
 	</div>
 <div class="footer">
-	<div class="content-text-2">
+	<div class="content-text-footer">
 		Наши контакты<br>
-		+38 (095) 555-33-55<br>
-		+38 (072) 555-77-88<br>
-		+7 (906) 455-88-99
+		+38 (072) 208-98-07<br>
+		+7 (965) 369-04-91<br>
+		novotransinfo@gmail.com
 	</div>
 </div>
 
