@@ -1,0 +1,249 @@
+<html>
+<body>
+	<style>
+		@font-face {
+			font-family: Inverkrug; /* Имя шрифта */
+			src: url(Inverkrug.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: OutlineInverkrug; /* Имя шрифта */
+			src: url(OutlineInverkrug.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: mrVlaShuVlaShu; /* Имя шрифта */
+			src: url(mrVlaShuVlaShu.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: mrKindlyJasmineG; /* Имя шрифта */
+			src: url(mrKindlyJasmineG.otf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: TruetypewriterPolyglOTT; /* Имя шрифта */
+			src: url(TruetypewriterPolyglOTT.ttf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: PonterX; /* Имя шрифта */
+			src: url(PonterX.ttf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: SlimamifMedium; /* Имя шрифта */
+			src: url(SlimamifMedium.ttf); /* Путь к файлу со шрифтом */
+		}
+		@font-face {
+			font-family: MakBold; /* Имя шрифта */
+			src: url(MakBold.otf); /* Путь к файлу со шрифтом */
+		}
+		
+		body {
+			margin: 0px;
+			
+		}
+		
+		.header {
+			background-color: #CCCCCC;
+			height: 80px;
+			width: 100%;
+			position: fixed;
+			opacity: 0.8;
+			font-family: Comic Sans MS,'Roboto',sans-serif;
+			font-size: 10pt;
+			z-index: 2;
+		}
+		
+		.time {
+			margin-top: 30px;
+			font-weight: bold;
+		}
+		.header div {
+			float: left;
+		}
+		.vspace {
+			min-width: 20px;
+			margin-top: 10px;
+		}
+		.hspace {
+			min-height: 30px;
+		}
+		#logo {
+			font-family: mrVlaShuVlaShu;
+			font-size: 27px;
+		}
+		.messenger img {
+			margin-top: 20px;
+			width: 34px;
+			height: 34px;
+		}
+		
+		.phones {
+			margin-top: 10px;
+			font-weight: bold;
+			text-align: right;
+			
+		}
+		
+		.content {
+			min-height: 80%;
+			padding-top: 5%;
+			padding-left: 10%;
+
+		}
+		
+		.content-head, .content-head li {
+			font-size: 20px;
+			color: #FFFFCC;
+			list-style-type: circle;
+			font-weight: bolder;
+			font-family: MakBold;
+			
+		}
+		
+		
+		
+		 .content-text-1 {
+			color: #FFFFCC;
+			font-family: MakBold;
+			font-size: 22pt;
+			
+		 }
+		 	
+		 .content-text-3 {
+			color: #FF9933;
+			font-family: TruetypewriterPolyglOTT;
+			
+		 }
+		
+		 .content-text-head {
+			background-color: #FF6600;
+			text-decoration: none;
+			border-radius: 5px;
+			opacity: 0.75;
+			max-width: 750px;
+			max-height: 120px;
+			padding-left: 30px;
+			font: 120% Monotype Corsiva;
+			color: #660000;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		 .request {
+			 text-align: center;
+			 margin-left: 30%;
+			 margin-top: 20px;
+			 padding-top: 5px;
+			 background-color: #CCC;
+			 max-width: 500px;
+			 border-radius: 10px;
+		 }
+		.request input, select, option, button {
+			width: 330px;
+			min-height: 50px;
+			margin: 5px;
+			color: #777;
+			font-family: 'Comic Sans MS';
+			font-size: 14pt;
+			text-align: center;
+			border-radius: 5px;
+			border: 0px;
+		}
+		
+
+	
+		.request h2 {
+			color: #FF9931;
+    		font-family: TruetypewriterPolyglOTT;
+		}
+
+		.request p {
+			color: #FF9931;
+    		font-family: Comic Sans MS,'Roboto',sans-serif;
+			font-size: 25px;
+		}
+		#hider1 {
+			margin-bottom: 20px;
+			width: 160px;
+			color: white;
+			font-size: 12pt;
+			background-color: #199c68;
+
+		}
+		#hider2 {
+			margin-bottom: 20px;
+			width: 160px;
+			color: white;
+			font-size: 12pt;
+			background-color: #F76835;
+
+		}
+		#direction1 {
+			display: none;
+		}
+		#direction2 {
+			display: none;
+		}
+		#direction1 h2, #direction2 h2 {
+			font-family: PonterX;
+			color: #660033;
+		}
+
+		
+		.footer {
+			background: url(bg-footer.jpg) 100% no-repeat;
+			background-size: cover;
+			border-radius: 10px;
+			padding-top: 40px;
+			min-height: 250px;
+			min-width: 100%;
+			font-size: 26pt;
+			text-align: center;
+		}
+		.content-text-footer {
+			color: #FFFFCC;
+			font-family: TruetypewriterPolyglOTT;
+			
+		 }
+		</style>
+<div class="header">
+	<div><img src="logo.png"></div>
+	<div align="center" class="vspace">|<br>|<br>|</div>
+	<div>
+		<div id="logo">
+			НОВО-ТРАНС
+		</div><br> 
+		Автобусные билеты из<br> ЛДНР в Россию или обратно.
+	</div>
+	<div class="vspace"> &nbsp;</div>
+	<div class="time">Ежедневно с 9 : 00 до 20 : 00</div>
+	<div class="vspace"> &nbsp;</div>
+	<div><br>Связаться с нами<br>в мессенджерах</div>
+	<div class="vspace"> &nbsp;</div>
+	<div class="messenger">
+		<div ><a href="#"><img src="telegram-icon-1.png"></a>&nbsp;&nbsp;</div><div><a href="#"><img src="whatsapp-icon-1.png"></a>&nbsp;&nbsp;</div><div><a href="#"><img src="viber-icon-1.png"></a></div>
+	</div>
+	<div class="stroke"> &nbsp;</div>
+	<div class="phones">+38 (072) 208-98-07<br>
+		+7 (965) 369-04-91<br></div>
+</div>
+<div class="content">
+	<div class="hspace">&nbsp;</div>
+	<div class="content-head">
+		<div class="content-text-head"><h1><span class="">Спасибо ! С Вами свяжутся в ближайшее время<br></span></h1></div>
+		
+		</div>
+
+	</div>
+	
+
+
+<div class="footer">
+	<div class="content-text-footer">
+		Наши контакты<br>
+		+38 (072) 208-98-07<br>
+		+7 (965) 369-04-91<br>
+		novotransinfo@gmail.com
+	</div>
+</div>
+
+
+</body>
+<div>
