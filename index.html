@@ -206,7 +206,7 @@
 		 }
 		</style>
 <div class="header">
-	<div><img src="logo.png"></div>
+	<div><img src="header.png"></div>
 	<div align="center" class="vspace">|<br>|<br>|</div>
 	<div>
 		<div id="logo">
@@ -248,31 +248,29 @@
 	
 	<div class="request">
 		<h1 class="content-text-3">Оставить заявку для<br> бронирования билета</h1>
-		<form action="https://formspree.io/#" method="POST">
+		<form action="http://lm4922.darkhost.top/send/mail.php" method="POST">
 			<label>
-				<input type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="Фамилия"><br>
-				<input type="text" size="28" maxlength="65" placeholder="Введите ваше имя" name="Имя"><br>
-				<input type="text" size="28" maxlength="65" placeholder="Введите ваше отчество" name="Отчество"><br>
+				<input type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="surname" required><br>
+				<input type="text" size="28" maxlength="65" placeholder="Введите ваше имя" name="firstname" required><br>
+				<input type="text" size="28" maxlength="65" placeholder="Введите ваше отчество" name="otchestvo" required><br>
 			</label><br>
 			<label>
 		  
-				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш эл. ардес" name="e-mail">
+				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш эл. ардес" name="email">
 			</label><br>
 			<label>
 		  
-				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="Телефон">
+				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="phone" required>
 			</label><br>
 			<br>
 			<h1 class="content-text-3">Выбирете направление</h1>
 			<input type="button" id="hider1" size="20" value="Из ЛДНР в Россию">
 			<input type="button" id="hider2"  value="Из России в ЛДНР">
-
-			<label>
-				
 				
 			<div id="direction1">
 				<h2>Из ЛДНР в Россию</h2>
-				<select size="1" name="Направление">
+				<select size="1" name="fromLDNR">
+					<option value="">Пункт отправления</option>
 					<option value="Луганск">Луганск</option>
 					<option value="Алчевск">Алчевск</option>
 					<option value="Стаханов">Стаханов</option>
@@ -289,8 +287,8 @@
 					<option value="Торез">Торез</option>
 					<option value="Шахтёрск">Шахтёрск</option>
 				</select>
-				
-				<select size="1" name="Направление">
+				<select size="1" name="toRussia">
+					<option value="">Пункт прибытия</option>
 					<option value="Москва">Москва</option>
 					<option value="Санкт-Питербург">Санкт-Питербург</option>
 					<option value="Новгород Великий">Нижний Новгород</option>
@@ -301,7 +299,8 @@
 			</div>
 			<div id="direction2">
 				<h2>Из России в ЛДНР</h2>
-				<select size="1" name="Направление">
+				<select size="1" name="fromRussia">
+					<option value="">Пункт отправления</option>
 					<option value="Москва">Москва</option>
 					<option value="Санкт-Питербург">Санкт-Питербург</option>
 					<option value="Новгород Великий">Нижний Новгород</option>
@@ -309,25 +308,25 @@
 					<option value="Воронеж">Воронеж</option>
 					<option value="Белгород">Белгород</option>
 				</select>
-				<select size="1" name="Направление">
-				<option value="Луганск">Луганск</option>
-				<option value="Алчевск">Алчевск</option>
-				<option value="Стаханов">Стаханов</option>
-				<option value="Красный Луч">Красный Луч</option>
-				<option value="Ровеньки">Ровеньки</option>
-				<option value="Краснодон">Краснодон/option>
-				<option value="Лутугино">Лутугино</option>
-				<option value="Донец">Донец</option>
-				<option value="Горловка">Горловка</option>
-				<option value="Дебальцево">Дебальцево</option>
-				<option value="Енакиево">Енакиево</option>
-				<option value="Макеевка">Макеевка</option>
-				<option value="Углегорск">Углегорск/option>
-				<option value="Торез">Торез</option>
-				<option value="Шахтёрск">Шахтёрск</option>
-			</select>
-			
-		</div>
+				<select size="1" name="toLDNR">
+					<option value="">Пункт прибытия</option>
+					<option value="Луганск">Луганск</option>
+					<option value="Алчевск">Алчевск</option>
+					<option value="Стаханов">Стаханов</option>
+					<option value="Красный Луч">Красный Луч</option>
+					<option value="Ровеньки">Ровеньки</option>
+					<option value="Краснодон">Краснодон/option>
+					<option value="Лутугино">Лутугино</option>
+					<option value="Донец">Донец</option>
+					<option value="Горловка">Горловка</option>
+					<option value="Дебальцево">Дебальцево</option>
+					<option value="Енакиево">Енакиево</option>
+					<option value="Макеевка">Макеевка</option>
+					<option value="Углегорск">Углегорск/option>
+					<option value="Торез">Торез</option>
+					<option value="Шахтёрск">Шахтёрск</option>
+				</select>
+			</div>
 
 				<script>
 					document.getElementById('hider1').onclick = function() {
@@ -341,11 +340,11 @@
 					}
 				</script>
 				
-			</label><br>  
+			<br>  
 			<label>
-				<select size="1" name="Количество детей">
-					<option>Сколько всего детей ?</option>
-					<option value="0" checked>0</option>
+				<select size="1" name="KidsNumber" aria-placeholder="">
+					<option value="">Сколько всего детей ?</option>
+					<option value="0">0</option>
 					<option value="1">1</option>
 					<option value="2">2</option>
 					<option value="3">3</option>
