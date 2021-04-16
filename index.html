@@ -113,6 +113,11 @@
 			font-family: TruetypewriterPolyglOTT;
 			
 		 }
+
+		 .content-text-4 {
+			font-family: PonterX;
+    		color: #660033;
+		 }
 		
 		 .content-text-head {
 			background-color: #FF6600;
@@ -148,8 +153,11 @@
 			border-radius: 5px;
 			border: 0px;
 		}
-		
-
+		.request input[type="checkbox"] {
+			width: 20px;
+			min-height: 20px;
+			
+		}
 	
 		.request h2 {
 			color: #FF9931;
@@ -262,6 +270,14 @@
 		  
 				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="phone" required>
 			</label><br>
+			<div class="content-text-4">
+				<h4>На этот номер можно так же звонить через:</h4>
+				<input type="checkbox" name="messengers1" value="telegram">telegram
+				<input type="checkbox" name="messengers2" value="whatsapp">whatsapp
+				<input type="checkbox" name="messengers3" value="viber">viber<br><br>
+				<div style="color: #6600CC;">Если укзываете российский номер телефона,<br> пожалуйста добавляйте контакт, на<br> который можно позвонить через мессенджер.</div>
+			</div><br>
+
 			<br>
 			<h1 class="content-text-3">Выбирете направление</h1>
 			<input type="button" id="hider1" size="20" value="Из ЛДНР в Россию">
@@ -299,6 +315,7 @@
 			</div>
 			<div id="direction2">
 				<h2>Из России в ЛДНР</h2>
+				<h3></h3>
 				<select size="1" name="fromRussia">
 					<option value="">Пункт отправления</option>
 					<option value="Москва">Москва</option>
