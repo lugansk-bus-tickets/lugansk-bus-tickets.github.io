@@ -3,6 +3,7 @@
 	<link media="only screen and (max-width: 960px)" rel="alternate" href="http://lugbustickets.ru/tablet/index.html">
 	<link media="only screen and (max-width: 960px)" rel="alternate" href="http://lugbustickets.ru/phone/index.html">
 </head>
+
 <body>
 	<style>
 		@font-face {
@@ -155,6 +156,7 @@
 			 background-color: #CCC;
 			 max-width: 500px;
 			 border-radius: 10px;
+			 
 		 }
 		.request input, select, option, button {
 			width: 330px;
@@ -165,8 +167,13 @@
 			font-size: 14pt;
 			text-align: center;
 			border-radius: 5px;
-			border: 0px;
+			border: 0px;	
 		}
+
+		input.required {
+			border: 1px solid #FF6600;
+		}
+
 		.request input[type="checkbox"] {
 			width: 20px;
 			min-height: 20px;
@@ -346,9 +353,9 @@
 		<h1 class="content-text-3">Оставить заявку для<br> бронирования билета</h1>
 		<form action="https://lm4922.darkhost.top/send/mail.php" method="POST">
 			<label>
-				<input type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="surname" ><br>
-				<input type="text" size="28" maxlength="65" placeholder="Введите ваше имя" name="firstname" ><br>
-				<input type="text" size="28" maxlength="65" placeholder="Введите ваше отчество" name="otchestvo" ><br>
+				<input class="required" type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="surname" required><br>
+				<input class="required" type="text" size="28" maxlength="65" placeholder="Введите ваше имя" name="firstname" required><br>
+				<input class="required" type="text" size="28" maxlength="65" placeholder="Введите ваше отчество" name="otchestvo" required><br>
 			</label><br>
 			<label>
 		  
@@ -356,7 +363,7 @@
 			</label><br>
 			<label>
 		  
-				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="phone" >
+				  <input class="required" type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="phone" required>
 			</label><br>
 			<div class="content-text-4">
 				<h4>На этот номер можно так же звонить через:</h4>
@@ -380,14 +387,14 @@
 					<option value="Стаханов">Стаханов</option>
 					<option value="Красный Луч">Красный Луч</option>
 					<option value="Ровеньки">Ровеньки</option>
-					<option value="Краснодон">Краснодон/option>
+					<option value="Краснодон">Краснодон</option>
 					<option value="Лутугино">Лутугино</option>
 					<option value="Донец">Донец</option>
 					<option value="Горловка">Горловка</option>
 					<option value="Дебальцево">Дебальцево</option>
 					<option value="Енакиево">Енакиево</option>
 					<option value="Макеевка">Макеевка</option>
-					<option value="Углегорск">Углегорск/option>
+					<option value="Углегорск">Углегорск</option>
 					<option value="Торез">Торез</option>
 					<option value="Шахтёрск">Шахтёрск</option>
 					<option value=" "></option>
@@ -415,47 +422,47 @@
 					<option value="Стаханов">Стаханов</option>
 					<option value="Красный Луч">Красный Луч</option>
 					<option value="Ровеньки">Ровеньки</option>
-					<option value="Краснодон">Краснодон/option>
+					<option value="Краснодон">Краснодон</option>
 					<option value="Лутугино">Лутугино</option>
 					<option value="Донец">Донец</option>
 					<option value="Горловка">Горловка</option>
 					<option value="Дебальцево">Дебальцево</option>
 					<option value="Енакиево">Енакиево</option>
 					<option value="Макеевка">Макеевка</option>
-					<option value="Углегорск">Углегорск/option>
+					<option value="Углегорск">Углегорск</option>
 					<option value="Торез">Торез</option>
 					<option value="Шахтёрск">Шахтёрск</option>
 					<option value=" "></option>
 				</select>
 			</div>
-
-				<script>
-					document.getElementById('hider1').onclick = function() {
-						document.getElementById('direction1').style.display = "block";
-						document.getElementById('direction2').style.display = "none";
-						
-						selectElement('direction21', ' ')
-						selectElement('direction22', ' ')
-
-						function selectElement(id, valueToSelect) {    
-							let element = document.getElementById(id);
-							element.value = valueToSelect;
-						}
+			<script>
+				document.getElementById('hider1').onclick = function() {
+					document.getElementById('direction1').style.display = "block";
+					document.getElementById('direction2').style.display = "none";
+					
+					selectElement('direction21', ' ')
+					selectElement('direction22', ' ')
+			
+					function selectElement(id, valueToSelect) {    
+						let element = document.getElementById(id);
+						element.value = valueToSelect;
 					}
-					document.getElementById('hider2').onclick = function() {
-						document.getElementById('direction2').style.display = "block";
-						document.getElementById('direction1').style.display = "none";
-						
-						selectElement('direction11', ' ')
-						selectElement('direction12', ' ')
-
-						function selectElement(id, valueToSelect) {    
-							let element = document.getElementById(id);
-							element.value = valueToSelect;
-						}
-
+				}
+				document.getElementById('hider2').onclick = function() {
+					document.getElementById('direction2').style.display = "block";
+					document.getElementById('direction1').style.display = "none";
+					
+					selectElement('direction11', ' ')
+					selectElement('direction12', ' ')
+			
+					function selectElement(id, valueToSelect) {    
+						let element = document.getElementById(id);
+						element.value = valueToSelect;
 					}
-				</script>
+			
+				}
+			</script>
+
 				
 			<br>  
 			<label>
