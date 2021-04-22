@@ -346,9 +346,9 @@
 		<h1 class="content-text-3">Оставить заявку для<br> бронирования билета</h1>
 		<form action="https://lm4922.darkhost.top/send/mail.php" method="POST">
 			<label>
-				<input type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="surname" required><br>
-				<input type="text" size="28" maxlength="65" placeholder="Введите ваше имя" name="firstname" required><br>
-				<input type="text" size="28" maxlength="65" placeholder="Введите ваше отчество" name="otchestvo" required><br>
+				<input type="text" size="28" maxlength="65" placeholder="Введите вашу фамлию" name="surname" ><br>
+				<input type="text" size="28" maxlength="65" placeholder="Введите ваше имя" name="firstname" ><br>
+				<input type="text" size="28" maxlength="65" placeholder="Введите ваше отчество" name="otchestvo" ><br>
 			</label><br>
 			<label>
 		  
@@ -356,7 +356,7 @@
 			</label><br>
 			<label>
 		  
-				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="phone" required>
+				  <input type="text" size="28" maxlength="65" placeholder="Введите Ваш телефон" name="phone" >
 			</label><br>
 			<div class="content-text-4">
 				<h4>На этот номер можно так же звонить через:</h4>
@@ -373,8 +373,8 @@
 				
 			<div id="direction1">
 				<h2>Из ЛДНР в Россию</h2>
-				<select size="1" name="fromLDNR">
-					<option value="">Пункт отправления</option>
+				<select id="direction11" name="fromLDNR">
+					<option value="" >Пункт отправления</option>
 					<option value="Луганск">Луганск</option>
 					<option value="Алчевск">Алчевск</option>
 					<option value="Стаханов">Стаханов</option>
@@ -390,30 +390,25 @@
 					<option value="Углегорск">Углегорск/option>
 					<option value="Торез">Торез</option>
 					<option value="Шахтёрск">Шахтёрск</option>
+					<option value=" "></option>
 				</select>
-				<select size="1" name="toRussia">
+				<select id="direction12" name="toRussia">
 					<option value="">Пункт прибытия</option>
 					<option value="Москва">Москва</option>
 					<option value="Санкт-Питербург">Санкт-Питербург</option>
-					<option value="Новгород Великий">Нижний Новгород</option>
-					<option value="Ростов-на-Дону">Ростов-на-Дону</option>
-					<option value="Воронеж">Воронеж</option>
-					<option value="Белгород">Белгород</option>
+					<option value=" "></option>
 				</select>
 			</div>
 			<div id="direction2">
 				<h2>Из России в ЛДНР</h2>
 				<h3></h3>
-				<select size="1" name="fromRussia">
+				<select id="direction21" name="fromRussia">
 					<option value="">Пункт отправления</option>
 					<option value="Москва">Москва</option>
 					<option value="Санкт-Питербург">Санкт-Питербург</option>
-					<option value="Новгород Великий">Нижний Новгород</option>
-					<option value="Ростов-на-Дону">Ростов-на-Дону</option>
-					<option value="Воронеж">Воронеж</option>
-					<option value="Белгород">Белгород</option>
+					<option value=" "></option>
 				</select>
-				<select size="1" name="toLDNR">
+				<select id="direction22" name="toLDNR">
 					<option value="">Пункт прибытия</option>
 					<option value="Луганск">Луганск</option>
 					<option value="Алчевск">Алчевск</option>
@@ -430,6 +425,7 @@
 					<option value="Углегорск">Углегорск/option>
 					<option value="Торез">Торез</option>
 					<option value="Шахтёрск">Шахтёрск</option>
+					<option value=" "></option>
 				</select>
 			</div>
 
@@ -437,10 +433,26 @@
 					document.getElementById('hider1').onclick = function() {
 						document.getElementById('direction1').style.display = "block";
 						document.getElementById('direction2').style.display = "none";
+						
+						selectElement('direction21', ' ')
+						selectElement('direction22', ' ')
+
+						function selectElement(id, valueToSelect) {    
+							let element = document.getElementById(id);
+							element.value = valueToSelect;
+						}
 					}
 					document.getElementById('hider2').onclick = function() {
 						document.getElementById('direction2').style.display = "block";
 						document.getElementById('direction1').style.display = "none";
+						
+						selectElement('direction11', ' ')
+						selectElement('direction12', ' ')
+
+						function selectElement(id, valueToSelect) {    
+							let element = document.getElementById(id);
+							element.value = valueToSelect;
+						}
 
 					}
 				</script>
